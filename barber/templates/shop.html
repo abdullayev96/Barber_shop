@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<ul class="list-articles">
+   {% for p in posts %}
+   <li>
+
+   {% if p.photo %}
+       <img class="post-img" src="{{p.photo.url}}">
+   {% endif %}
+   <h4 class="post-title">{{p.title}}</h4>
+   <p>{{p.description}}</p>
+    <p>{{p.price}} so'm</p>
+
+</li>
+   {% endfor %}
+</ul>
+
+
+{% endblock content  %}
+
+
+
+
+

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if post.photo %}
+	<img class="post-img" src="{{post.photo.url}}">
+{% endif %}
+<h3 class="post-title">{{post.title}}</h3>
+
+<h3 class="post-item"><span>DESCRIPTION: </span> {{post.description}}</h3>
+<h3 class="post-item"><span>PRICE: </span> {{post.price}} so'm</h3>
+
+
+{% endblock %}
